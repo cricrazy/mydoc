@@ -1,0 +1,174 @@
+set nocompatible
+
+" pathogen start
+  execute pathogen#infect()
+  filetype plugin indent on
+" pathogen stop
+
+source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+
+set diffexpr=MyDiff()
+function MyDiff()
+  let opt = '-a --binary '
+  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+  let arg1 = v:fname_in
+  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+  let arg2 = v:fname_new
+  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+  let arg3 = v:fname_out
+  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+  let eq = ''
+  if $VIMRUNTIME =~ ' '
+    if &sh =~ '\<cmd'
+      let cmd = '""' . $VIMRUNTIME . '\diff"'
+      let eq = '"'
+    else
+      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+    endif
+  else
+    let cmd = $VIMRUNTIME . '\diff'
+  endif
+  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+endfunction
+
+" Set map leader to space
+  let mapleader = "\<Space>"
+  
+" allows to swtich between buffer without saving
+  set hidden
+
+" stop beeping or flashing the screen
+  set vb t_vb=
+
+" change command mode from : to semi-colon
+  :nnoremap ; :
+
+" Enable Ctrl + S for save "
+  source $VIMRUNTIME/mswin.vim
+
+  behave mswin
+
+" Insert a new line without leaving normal mode"
+  nmap oo o<Esc>kj
+  nmap OO O<Esc>jk
+
+" enable search suggestion for help"
+  set wildmenu
+
+  set tabstop=4 textwidth=80
+
+" To indent two spaces (instead of one tab of eight spaces, the vim default)
+  set shiftwidth=2
+
+" Control+tab Tab navigation
+  map <C-Tab> gt
+
+" show matching brackets
+  set showmatch
+
+" highlight search string dynamically, as it is typed
+  set incsearch
+
+" clear search highlight
+  nnoremap <leader>c :noh<CR>
+
+" Keep search matches in the middle of the window.
+  :nnoremap n nzz
+  :nnoremap N Nzz
+  :nnoremap * *zz
+  :nnoremap # #zz
+  :nnoremap g* g*zz
+  :nnoremap g# g#zz
+
+" use regular expression in search by default
+  nnoremap / /\v
+  vnoremap / /\v
+  nnoremap H ^
+  vnoremap L g_
+  nnoremap <leader>s :%s/\v/<left>
+  nnoremap :g/ :g/\v
+  nnoremap :g// :g//
+
+" source $MYVIMRC reloads the saved $MYVIMRC
+  :nmap <Leader>u :source $MYVIMRC
+
+" opens $MYVIMRC for editing
+  :nmap <Leader>v :tabe $MYVIMRC
+
+" hybrid line numbers, shows both relative and actual
+  set number
+
+" ignore cases ans selects cases smartly. e.g. :res<tab> :Restart
+  set ignorecase smartcase
+
+" Disable toolbar, highlight current line
+  set guioptions-=T
+  set guioptions-=b
+
+" use par=exe for justified comments
+  set formatprg=par\ r80jj
+
+" Set default file encoding to be utf-8
+  set encoding=utf-8
+
+" map ;w to save file in insert mode
+  inoremap ;w <esc>:w<CR>k
+
+" Notepad++ like double click to highlight all instances
+  noremap <2-LeftMouse> *N
+  inoremap <2-LeftMouse> <c-o>*<c-o>N
+
+" custom fonts, colorschemes
+  set guifont=Droid\ Sans\ Mono:h10
+  colorscheme chela_light
+
+" alway insert space when tab is pressed.
+  :set expandtab
+
+" trying to speed up vim 
+" http://vim.wikia.com/wiki/Fix_syntax_highlighting
+  set nocursorcolumn
+  set nocursorline
+  set norelativenumber
+  syntax sync minlines=256
+  autocmd BufEnter * :syn sync maxlines=500 "# of lines to scan for syntax highlighting.
+  set nofoldenable    " disable folding its confusing.
+  set synmaxcol=120 " syntax will show up for 120 column width
+
+" Default no wrap paragraph
+  set nowrap
+
+" Opens command prompt on the current file's directory
+  " Open command prompt by running :Cp
+  command Cp :!start cmd /k cd %:p:h<CR>
+
+  "Open windows explorer by running :We
+  command We :!start Explorer /select,%:p<CR>
+
+" Open vim with maximized window
+  au GUIEnter * simalt ~x
+
+" Vertical line at 80th column
+  highlight ColorColumn ctermbg=lightgrey
+  set cc=81
+
+" for pathogen (check comment on github page)
+  set sessionoptions-=options
+
+" search files using gf
+  :set path=c:/datk_code/datk_devel/**
+  :set path+=c:/datk_code/vni/**
+  :set path+=c:/genasys_svn/lib/**
+  :set path+=c:/users/chrisa/datk/pro/**
+"  :set path+=c:/users/chrisa/vimfiles/bundle/**
+"  :set path+=C:/tcl_automation_reference/DATK/Part1065/**
+"  :set path+=C:/Emissions_Repository/trunk/**
+"
+" set pro extension so that gf on text will open that file from path
+" (http://usevim.com/2013/01/04/vim101-jumping/)
+  set suffixesadd=.c
+  set suffixesadd+=.pro

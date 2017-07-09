@@ -3,7 +3,7 @@ What Choco Packages to Install
 
 This single command can install all the software apps with single command. you need to enable `allowGlobalConfirmation` to avoid all confirmations.
 
-.. Note::
+.. NOTE::
    If it fails in the middle, run the command again. It will skip the programs already installed. 
 
 Here is a one ubiquitous command:

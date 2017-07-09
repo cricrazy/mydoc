@@ -1,8 +1,7 @@
 How to install Vim and Import Settings
 =======================================
 
-- Install vim from `google
-  <http://www.vim.org/download.php>`_. 
+- Install vim from google. 
 - Copy ``_vimrc`` file to your user folder.
 - Copy ``vimfiles`` folder to your user folder.
 

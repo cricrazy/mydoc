@@ -41,13 +41,13 @@ Modifying & Editing Comments
 - Vim automatically add semi colons and also indent the message based on
   previous line. It is much easier to edit the existing text.
   
-.. image:: ..\images\vim1.gif
+.. image:: ..\..\images\vim1.gif
    :alt: Automatic indentation and comments
 
 Using paragraph formatter ``Par`` with Vim
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: ..\images\vim_par.gif
+.. image:: ..\..\images\vim_par.gif
    :alt: par with vim
 
 **Before**
@@ -94,7 +94,7 @@ middle. (using ``submatch``) Notice, since, we did not use ``g`` (global)
 option, it will only replace first digit and not one inside the text
 descriptions of article.
 
-.. image:: ..\images\vim-search-replace-modify-number-sequences.gif
+.. image:: ..\..\images\vim-search-replace-modify-number-sequences.gif
 
 Advanced search and replace to add line numbers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -109,7 +109,7 @@ numbering of all lines.
     
      :%s/^/\=line(".") . ". "/g
 
-.. image:: ..\images\vim-search-replace-add-line-numbers.gif
+.. image:: ..\..\images\vim-search-replace-add-line-numbers.gif
 
      
 Using Vim Folds for Folding DATK's header comment information
@@ -124,12 +124,12 @@ vimscript to create folds for DATK Header sections.
 - It also has subsections for PURPOSE, Controls, Tables, Inputs, Outputs, NAME, 
   CONTROL_NAME.
 
-.. image:: ..\images\idl_folding.gif
+.. image:: ..\..\images\idl_folding.gif
    :alt: folding header comments
 
 It is located at ::
 
-  C:\Users\chrisa\Documents\Apps\Portable-programs\gVimPortable\Data\settings\vimfiles\after\ftplugin\idlang\folding.vim
+  \Data\settings\vimfiles\after\ftplugin\idlang\folding.vim
 
 Here is the vimscript``. 
 
@@ -139,7 +139,7 @@ Here is the vimscript``.
      " This function uses folds to close DATK's
      " comment section in analyses.
      "
-     " 2016-09-01  AC
+     " 2016-09-01  AB
      "
      function! IdlangFolds()
        let thisline = getline(v:lnum)

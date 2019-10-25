@@ -26,9 +26,12 @@ attachement, with password - amit)
 
 Now type the following::
 
+  ; Update youtube-dl
+    pip install --upgrade youtube-dl
+
     youtube-dl --extract-audio --audio-format mp3 -i --audio-quality 0 "https://www.youtube.com/watch?v=rPOrAxGXFno&t=19178s"
     
-    -i - allows it to continue if the error occurs in a playlist.
+  ; -i - allows it to continue if the error occurs in a playlist.
 
 * make sure you use --audio-quality 0 (which is the highest quality), 
   without this the mp3 can be lower quality. 

@@ -39,32 +39,20 @@ grep -v '^$' file.txt
 -v reverses the pattern matching, so it selects all lines that are not empty.
 
 
-````
- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-                                    _                                                                                   _     _   _
-                                   (_)                                                                                 | |   | | (_)
-   ___   _   _    __ _  __      __  _   _ __      ______      ___    ___    _ __ ___    _ __ ___     __ _   _ __     __| |   | |  _   _ __     ___
-  / __| | | | |  / _` | \ \ /\ / / | | | '_ \    |______|    / __|  / _ \  | '_ ` _ \  | '_ ` _ \   / _` | | '_ \   / _` |   | | | | | '_ \   / _ \
- | (__  | |_| | | (_| |  \ V  V /  | | | | | |              | (__  | (_) | | | | | | | | | | | | | | (_| | | | | | | (_| |   | | | | | | | | |  __/
-  \___|  \__, |  \__, |   \_/\_/   |_| |_| |_|               \___|  \___/  |_| |_| |_| |_| |_| |_|  \__,_| |_| |_|  \__,_|   |_| |_| |_| |_|  \___|
-          __/ |   __/ |
-         |___/   |___/
-  _                 _             _   _           _     _                                     _
- (_)               | |           | | | |         | |   (_)                                   | |
-  _   _ __    ___  | |_    __ _  | | | |   __ _  | |_   _    ___    _ __       __ _   _ __   | |_   ______    ___   _   _    __ _
- | | | '_ \  / __| | __|  / _` | | | | |  / _` | | __| | |  / _ \  | '_ \     / _` | | '_ \  | __| |______|  / __| | | | |  / _` |
- | | | | | | \__ \ | |_  | (_| | | | | | | (_| | | |_  | | | (_) | | | | |   | (_| | | |_) | | |_           | (__  | |_| | | (_| |
- |_| |_| |_| |___/  \__|  \__,_| |_| |_|  \__,_|  \__| |_|  \___/  |_| |_|    \__,_| | .__/   \__|           \___|  \__, |  \__, |
-                                                                                     | |                             __/ |   __/ |
-                                                                                     |_|                            |___/   |___/
-                                                                                     
-````
+## How to install apt-cyg in Cygwin (Commandline install tool)
 
 lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
 install apt-cyg /bin
 
-install anything
+To install anything
 apt-cyg install nano
+
+## Rename existing file with file + timestamp using batch script
+
+This script renames the EXISTING FILE WITH A FILENAME WITH A TIME STAMP. this is useful when you want to overwrite, but do not want to
+remove old file.
+                                     
+ren "C:\test.exe"  "test_%date:~10,4%%date:~7,2%%date:~4,2%.exe"
 
 
 

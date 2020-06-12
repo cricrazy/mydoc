@@ -1,0 +1,70 @@
+[1.]  Make sure your system has a temporary Internet connection to download all the necessary files.
+
+
+
+[2.]  Open a Terminal program.
+
+
+
+[3.]  Make sure your system is up-to-date.
+
+$ sudo apt update
+
+$ sudo apt upgrade
+
+$ sudo reboot
+
+[ Note:  Reboot may be needed if the kernel has been updated/upgraded.  This step is totally optional.  You don't have to do it but it is highly recommended. ]
+
+
+
+[4.]  Once back to the desktop, open a Terminal program again.
+
+
+
+[5.]  Make sure you have all the necessary files (headers, gcc compiler, make utility, etc.) to compile and install the driver.
+
+$ sudo apt install linux-headers-$(uname -r)
+
+$ sudo apt install build-essential dkms git
+
+
+
+[6.]  Clone the open source driver from GitHub repository.
+
+$ git clone https://github.com/aircrack-ng/rtl8812au.git
+
+
+[ Note:  Right after 'rt' is a letter 'l' (like lemon), not a number '1' (like 1980).  And right after 88 is a number '1' (like 1980), not a letter 'l' (like lemon).  Typing them wrong will cause GitHub to prompt you inputting a Username and a Password or saying repository not found. ]
+
+
+
+[7.]  Change directory.
+
+$ cd rtl8812au/
+
+
+
+[8.]  Compile and install the driver.  There are two ways: using dkms as mentioned on the GitHub repository page or manually.  Please use either (a.) or (b.) but not both!
+
+
+
+(a.)  Using dkms(dynamic kernel module support) which will automatically rebuild and install on kernel updates.
+
+$ sudo ./dkms-install.sh
+
+
+
+(b.)  Manually.
+
+$ make
+
+$ sudo make install
+
+
+
+[9.]  Restart your system for the new driver to take effect.
+
+$ sudo reboot
+
+

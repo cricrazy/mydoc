@@ -11,7 +11,7 @@ Install Cygwin & Apt
 
 .. code-block:: bash
 
-   apt-cyg install nano   
+   apt-cyg install nano git curl vim figlet
    apt-cyg install git
    apt-cyg install ca-certificates   ; need for git
    apt-cyg install bash-completions

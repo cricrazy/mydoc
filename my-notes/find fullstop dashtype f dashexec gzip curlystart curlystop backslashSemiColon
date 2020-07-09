@@ -1,0 +1,5 @@
+amazing command that 
+
+1. gzip each file in the folder recursively
+2. remove the original file
+3. keeps the folder structure as it is.

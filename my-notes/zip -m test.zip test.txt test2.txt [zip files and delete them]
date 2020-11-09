@@ -1,0 +1,209 @@
+Example 1) Zipping a single file and multiple files with zip command
+Let’s assume you have a text file – reports1.txt – in your current directory and you want to zip it into an archive called reports.zip.
+
+The command for this operation will be:
+
+$ zip reports.zip reports1.txt
+zip-single-file-linux
+
+Additionally, you can zip multiple files at a go into an archive as shown:
+
+$ zip archive.zip file1 file2 file3
+
+Again, let’s assume that we have 3 text files reports1.txt, reports2.txt and reports3.txt. To zip them into the archive reports.zip, run the command:
+
+$ zip reports.zip reports1.txt reports2.txt reports3.txt
+zip-multiple-files-linux
+
+Example 2) Adding a file to a zip archive (-u)
+At times, you may find the need to add a file to a zip archive. To do so, use the -u flag. For example, to add another file reports4.txt, run:
+
+$ zip -u reports.zip report4.txt
+add-file-existing-zip-archive-linux
+
+Example 3) View contents of a zipped file
+To view contents of a zipped file, use the command as shown:
+
+$ zipinfo archive.zip
+view-contents-zipped-file-linux
+
+Example 4) Zipping all the files in the current directory (* )
+If you have multiple files in your current directory, you can zip all of them at a go using the wildcard symbol as shown in the syntax below:
+
+$ zip archive.zip *
+
+For example, to compress all files in the home directory to home.zip archive, execute the command below. Be sure that you are working in the home directory.
+
+$ zip home.zip *
+zipped-directory-linux
+
+Example 5) Delete a file from an archive (-d)
+Example 1) Zipping a single file and multiple files with zip command
+Let’s assume you have a text file – reports1.txt – in your current directory and you want to zip it into an archive called reports.zip.
+
+The command for this operation will be:
+
+$ zip reports.zip reports1.txt
+zip-single-file-linux
+
+Additionally, you can zip multiple files at a go into an archive as shown:
+
+$ zip archive.zip file1 file2 file3
+
+Again, let’s assume that we have 3 text files reports1.txt, reports2.txt and reports3.txt. To zip them into the archive reports.zip, run the command:
+
+$ zip reports.zip reports1.txt reports2.txt reports3.txt
+zip-multiple-files-linux
+
+Example 2) Adding a file to a zip archive (-u)
+At times, you may find the need to add a file to a zip archive. To do so, use the -u flag. For example, to add another file reports4.txt, run:
+
+$ zip -u reports.zip report4.txt
+add-file-existing-zip-archive-linux
+
+Example 3) View contents of a zipped file
+To view contents of a zipped file, use the command as shown:
+
+$ zipinfo archive.zip
+view-contents-zipped-file-linux
+
+Example 4) Zipping all the files in the current directory (* )
+If you have multiple files in your current directory, you can zip all of them at a go using the wildcard symbol as shown in the syntax below:
+
+$ zip archive.zip *
+
+For example, to compress all files in the home directory to home.zip archive, execute the command below. Be sure that you are working in the home directory.
+
+$ zip home.zip *
+zipped-directory-linux
+
+Example 5) Delete a file from an archive (-d)
+To remove a file from an archive, invoke the -d flag. For instance, to remove reports4.txt from the zipped file, run:
+
+$ zip -d reports.zip reports4.txt
+Example 6) Delete files after zipping (-m)
+As you may have noted, the original files remain even after zipping or archiving them.
+
+files-after-zipped-linux
+
+If you prefer you get rid of them during archival and conserve space, invoke the -m option during archival as shown:
+
+$ zip -m reports.zip reports1.txt reports2.txt reports3.txt
+remove-orginal-files-after-zipping-linux
+
+Example 7) How to zip a directory (-r)
+We have so far seen how to zip files. Often, you will be tasked with zipping directories since they take up more space for the most time.
+
+To zip a folder, use the syntax below. The -r option zipped the folder recursively.
+
+$ zip -r archive.zip folder
+
+For example, to zip a directory data to an archive data.zip, execute:
+
+$ zip -r data.zip data
+zipped-a-folder-linux
+
+As with files, you can also zip several folders concurrently as shown:
+
+$ zip -r archive.zip folder1 folder2 folder3
+
+zipped-multiple-folders-linux
+
+Example 8) Zip a file to a different destination
+To zip a file to a different destination other than the current directory simply specify the path to the zipped archive in your syntax as shown:
+
+$ zip /path/to/destination/archive.zip file
+
+For example, the file hello.txt is archived to file.zip file in the Documents/data/sales path.
+
+zip-file-to-different-location
+
+Example 9) Zip both files and directories into their own archives
+If, for whatever reason, you want to compress files and directories in the current directory into their individual zip archives, use the for loop as shown:
+
+$ for i in *; do zip -r "${i%}.zip" "$i"; done
+For example, the example below compresses the file hello.txt and folder sales into their own archives hello.zip and sales.zip respectively.
+
+zipped-files-directories-for-loop-linux
+
+Unzip command in Linux
+Let’s now shift gears and focus on unzip command. The command is used to unzip or decompress zipped files and directories. Let’s take a look at a few example usages of the command:
+
+Example 1) How to view the contents of a zipped file (-l)
+Before you are unzipping a file or directory, you can view the archive’s contents using the -l option as shown:
+
+$ unzip -l archive.zip
+
+For example:
+
+$ unzip -l data.zip
+list-contents-zipped-archive-linux
+
+Example 2) How to view detailed contents of a zipped file (-Z)
+To view more detailed information about the file such as file permissions and the total size of the files in the archive, use the -Z option as shown:
+
+$ unzip -Z data.zip
+More-Details-zipped-files-linux
+
+Example 3) How to unzip/decompress a zipped file (-d)
+In its basic and simplest syntax, unzipping a zipped file takes the syntax below and occurs in the current working directory.
+
+$ unzip archive.zip
+
+For example:
+
+$ unzip data.zip
+unzip-compressed-file-linux
+
+Example 4) Unzip a file to another directory
+To extract or unzip an archive to a different destination, use the -d flag and specify the destination path as shown
+
+$ unzip archive.zip -d /path/to/destination/folder
+
+For example.
+
+$ unzip data.zip -d /home/linuxtechi/Documents
+unzip-file-to-differnt-directory
+
+Example 5) Unzip one or more files from an archive
+Oftentimes, you will have a compressed file with multiple files. Instead of uncompressing the archive entirely, you may opt to just extract one or two files. To achieve this, specify the file(s) as shown in the  syntax:
+
+$ unzip archive.zip file1 file2
+
+For example, to extract a file called hello.txt from the archive home.zip run
+
+$ unzip home.zip hello.txt
+Additionally, you can extract the file to a different destination folder instead of the current directory. For example, the command below extracts the hello.txt file to the Documents/data/sales directory.
+
+$ unzip home.zip hello.txt -d Documents/data/sales
+unzip-single-file-zipped-archive-linux
+
+Example 6) Exclude certain files from being decompressed (- x)
+Just as you can extract a specific file(s) from an archive, so can you exclude certain files from being decompressed. This is possible using the ( -x) option in the syntax shown
+
+$ unzip archive.zip -x file1
+
+For example, the example below excludes files file1.txt & file2.txt from being extracted.
+
+$ unzip archive.zip -x file1.txt file2.txt
+exclude-files-while-unzipping-linux
+
+Example 7) How to suppress the output of unzip command (-q)
+As you may have noted, details of the unzip operation showing the location of the extraction and files being extracted is printed on the terminal. To suppress this info, use the -q switch as shown:
+
+$ unzip -q data.zip
+Example 8) How to overwrite existing files (-o)
+When you run the unzip command twice in the same directory, you will be prompted whether to replace, ignore the extraction or rename the existing files as shown in the output below.
+
+Prompt-before-overwriting-unzip-linux
+
+If you want to overwrite the existing file, without being prompted, use the -o option as shown:
+
+$ unzip -o data.zip
+Overwrite-files-during-unzip-linux
+
+Example 9) Unzip multiple files
+Finally, to unzip multiple files at a go, use a wildcard in the syntax shown:
+
+$ unzip '*.txt'
+Take note of the single quote enclosing the *.txt parameter.

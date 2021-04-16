@@ -1,0 +1,35 @@
+15. Use previous font. You can cycle through the fonts available with two keyboard shortcuts. Using Ctrl + Shift + 5 will give you the previous font.
+
+16. Use next font. Using Ctrl + Shift + 6 will give you the next font.
+
+17. Decrease text size. You can increase the size of your text with Ctrl + Shift + – (appropriately enough).
+
+18. Increase text size. You can increase your text size with Ctrl + Shift + + (the last + in this prompt is the actual key, not a prompt to hold down another button).
+
+19. Bold. The next few Gmail keyboard shortcuts might be familiar to you if you’ve used them in Word or another program. Using Ctrl + b will allow you to toggle bold formatting on or off.
+
+20. Italics. You can use Ctrl + i to toggle italics on or off.
+
+21. Underline. You can use Ctrl + u to toggle underlining on or off.
+
+22. Numbered list. If your emails don’t have lists, you’re missing out on a critical organizational tool that makes your emails more concise and easier to read. Use Ctrl + Shift + 7 to start or toggle on a numbered list.
+
+23. Bulleted list. In Gmail, you can use Ctrl + Shift + 8 to call up a bulleted list, much in the same way.
+
+24. Quote text. If you need to quote text in your email, you can use an indented format to make it more obvious and cleaner-looking. Try using Ctrl + Shift + 9 to do it.
+
+25. Indent less. If you need to indent your text to the previous tab, use Ctrl + [ to regress.
+
+26. Indent more. Using Ctrl + ] will allow you to indent more.
+
+27. Align left. To align your text to the left side, use Ctrl + Shift + l (lowercase “L”).
+
+28. Align center. Using Ctrl + Shift + e will align your text in the center.
+
+29. Align right. The prompt Ctrl + Shift + r will align your text to the right.
+
+30. Set right-to-left. If you want to establish right-to-left typing, like a madman, use Ctrl + Shift + , to do it.
+
+31. Set left-to-right. When you’ve realized your mistake, use Ctrl + Shift + . to bring it back to left-to-right.
+
+32. Remove all formatting. If you want to scrap whatever formatting your text had a moment ago, the prompt Ctrl + \ will help you.

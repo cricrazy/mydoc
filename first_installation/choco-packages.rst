@@ -11,4 +11,4 @@ This single command can install all the software apps with single command. you n
    
 Here is a one ubiquitous command:
 
-    choco install googlechrome git github curl ruby paint.net vim youtube-dl chocolateygui sublimetext3 greenshot windirstat winmerge pip ffmpeg everything pandoc mp3tag handbrake.install ghostscript freefilesync graphviz textstudio xmind libreoffice imagemagick.app pycharm-community miktex glaryutilities-free github cygwin anyvideoconverter filezilla pdfcreator malwarebytes teamviewer vcredist2015 wizmouse imageburn cdburnerxp anaconda3 
+    choco install googlechrome 7zip vlc gow firefox notepadplusplus.install mingw totalcommander sumatrapdf git github curl ruby paint.net vim youtube-dl chocolateygui sublimetext3 greenshot windirstat winmerge qdir shotcut pdfsam figlet-go mc tortoisegit font-awesome-font freeplane pip ffmpeg everything pandoc mp3tag ghostscript textstudio xmind imagemagick.app pycharm-community adobereader github filezilla pdfcreator teamviewer vcredist2015 miktex  anaconda3 cygwin vscode dropbox wget zoom irfanview

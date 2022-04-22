@@ -12,13 +12,19 @@
 
 ### Paragraph and line breaks
 
-A paragraph is simply one or more consecutive lines of text. In markdown source code, paragraphs are separated by more than one blank lines. In Typora, you only need to press `Return` to create a new paragraph.
+A paragraph is simply one or more consecutive lines of text. In , paragraphs are separated by more than one blank lines. In Typora, you only need to press `Return` to create a new paragraph.
 
-Press `Shift` + `Return` to create a single line break. However, most markdown parser will ignore single line break, to make other markdown parsers recognize your line break, you can leave two whitespace at the end of the line, or insert `<br/>`.
+Press `Shift` + `Return` to create a single line break. However, most markdown parser will single line break, to make other markdown parsers recognize your line break, you can leave two whitespace at the end of the line, or insert `<br/>`.
 
 ### Headers
 
+
+
+
 Headers use 1-6 hash characters at the start of the line, corresponding to header levels 1-6. For example:
+
+This is a new text. 
+
 
 ``` markdown
 # This is an H1

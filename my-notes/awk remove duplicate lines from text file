@@ -1,2 +1,0 @@
-remove duplicate lines from a text file using Awk
-awk "!x[$0]++" huge.txt>output.txt

@@ -1,9 +1,0 @@
-; get best quality youtube-dl download in MP3
-yt3 =youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -ciwx ""{left}
-
-; download all videos as mp4
-yt4 =youtube-dl --format "bestvideo+bestaudio[ext=m4a]/bestvideo+bestaudio/best" --merge-output-format mp4 -o '%(title)s.%(ext)s' ""{left}
-
-; skip already downloaded - great for playlist, ignore errors, overwrites etc
-; convert to mp3
-yt5 = youtube-dl --download-archive downloaded.txt --no-post-overwrites -ciwx --audio-format mp3 -o "%(title)s.%(ext)s" ""{left}

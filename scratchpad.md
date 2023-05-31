@@ -3,7 +3,9 @@
 1. [How to sort CSV file with first column](#sort_csv)
 2. [Use SED/Grep command to delete empty lines](#deletempty)
 
-## How to sort CSV file with first column
+//////
+
+How to sort CSV file with first column
 
 Using Unix's sort command you can use the following to get the csv files sorted by first column. 
 
@@ -16,6 +18,9 @@ sort -s -n -k 1,1 7PZ01295.csv > 1_7PZ01295.csv
 ```
 
 This could definitely be improved to pass the for loop or file list *
+
+
+/////
 
 ## Use SED/Grep command to delete empty lines
 

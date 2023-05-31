@@ -1,3 +1,0 @@
-remove duplicates using AWK
-
-awk "!x[$0]++" huge.txt>output.txt

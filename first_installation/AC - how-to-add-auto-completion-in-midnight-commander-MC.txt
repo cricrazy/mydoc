@@ -1,0 +1,10 @@
+In order to add file/folder autocompletion in Midnight commander. 
+
+edit mc.keymap file to add following:
+
+[filemanager]
+ChangePanel = ctrl-i
+[input]
+Complete = tab
+
+The mc.keymap file can be found in c:\program files (x86)\midnight commander\etc or in c:\users\amitc\appdata\roaming\midnight commander folder.

@@ -1,0 +1,11 @@
+find . -type f | sed -rn 's|.*/[^/]+\.([^/.]+)$|\1|p' | sort -u
+
+
+find . -type f -> finds all files
+'s -> search and replaces
+| -> is a separator here (similar to /)
+.*/ -> find the whole path and last filename and extension
+[^/] -> makes sure it escapes any /
+() -> accounts for extension only using \1 in substitution
+p -> print only
+sort -u -> the output is piped to sorted list

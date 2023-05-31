@@ -1,0 +1,3 @@
+ffmpeg -i "input.MOV" -vf subtitles="subtitle.srt" -crf 18 -c:a copy out.avi
+
+you can easily make a srt file using AegiSub open source software very handy

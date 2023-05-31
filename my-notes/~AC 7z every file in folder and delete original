@@ -1,0 +1,21 @@
+THIS CREATES 7Z FILE FOR EVERY CSV FILE AND DELETES ORIGINAL
+============================================================
+
+FOR %i IN (*.csv) do C:\Users\chrisa\Documents\Apps\7za_cmd\7za.exe a "%~ni.7z" "%i" -sdel
+
+%i - variable that holds the filename for each step in the FOR loop
+(*.csv) - selection criteria
+C:\Users\chrisa\Documents\Apps\7za_cmd\7za.exe - 7za path
+"%~ni" - expands the %i variable to just the filename without extension
+-sdel - deletes the original file after archiving
+
+THIS CREATES 7Z FILE FOR EVERY FOLDER AND DELETES ORIGINAL
+==========================================================
+
+FOR /F "usebackq delims=?" %i In (`DIR /B /A:D`) Do C:\Users\chrisa\Documents\Apps\7za_cmd\7za.exe a "%i.7z" "%i" -sdel
+
+/F tells FOR to iterate over the expanded value in ()
+usebackq tells FOR that I am going to pass a command and use the output to iterate
+delims=? tells FOR that I want to break tokens apart on the ? - an illegal character in file names and directories. I only want one token.
+The /B in DIR is for bare format - just the name
+The /A:D in DIR is for restricting the results by attribute, the D is for directories

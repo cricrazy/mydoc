@@ -1,0 +1,22 @@
+2023-05-31
+
+Works. Just replace 'file' with actual file name without extension
+
+Run it in GitBash
+
+
+export inputPrefix='file' parts=16 && split --verbose -d -n l/${parts} --additional-suffix=.csv --filter='([ "$FILE" != "${inputPrefix}.00.csv" ] && head -1 "${inputPrefix}.csv" ; cat) > "$FILE"' "${inputPrefix}.csv" "${inputPrefix}."
+
+
+ALTERNATIVE
+
+using AWK - Did not test
+
+awk -v l=11000 '(NR==1){header=$0;next}
+                (NR%l==2) {
+                   close(file); 
+                   file=sprintf("%s.%0.5d.csv",FILENAME,++c)
+                   sub(/csv[.]/,"",file)
+                   print header > file
+                }
+                {print > file}' file.csv

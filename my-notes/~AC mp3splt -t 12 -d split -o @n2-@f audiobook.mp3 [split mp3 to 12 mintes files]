@@ -1,0 +1,12 @@
+Split Mp3 into listenable format of about 12 minutes
+----------------------------------------------------
+* This command will convert mp3 into segments of 12 minutes mp3. 
+* The name will be formatted as 01-nameoffile.mp3, 02-nameoffile.mp3 etc.
+* In the below command, @n2 means add a incremental number with 2 digits,
+  i.e. 01, 02, ... This is useful where some audio players sort the playlist 
+  in a unique ways.::
+
+    mp3splt -t 12.0 -d split -o @n2-@f "Mere Christianity - Audiobook - C. S. Lewis.mp3"
+
+**Prerequisite** 
+- Install mp3splt for windows.  (Attached here : password: amit)
